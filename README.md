@@ -1,71 +1,44 @@
-# flutter_ringtone_player
+# Flutter Clock App
+Minimal UI | Modern Theme | Full Functional<br>
+[![Discord](https://img.shields.io/discord/731616556622282814?logo=discord&logoColor=white)](https://discord.com/invite/nWFnTqP)
 
-A simple ringtone, alarm & notification player plugin.
+<p align="center">
+  <img src="flutter_clock_app.png" alt="flutter alarm clock app" title="Screenshot">
+</p>
 
-[![pub package](https://img.shields.io/pub/v/flutter_ringtone_player.svg)](https://pub.dartlang.org/packages/flutter_ringtone_player)
-[![flutter](https://github.com/inway/flutter_ringtone_player/actions/workflows/flutter.yml/badge.svg)](https://github.com/inway/flutter_ringtone_player/actions/workflows/flutter.yml)
+Flutter Custom Painter Tutorial || Clock App (Episode-1)
+https://youtu.be/HyAeZKWWuxA
 
-## Usage
+Flutter Design Tutorial || Clock App (Episode-2)
+https://youtu.be/MPc-K8oEbdE
 
-Add following import to your code:
+Flutter Navigation with Provider || Clock App (Episode-3)
+https://youtu.be/WMp5FnQ1X_g
 
-```dart
-import 'package:flutter_ringtone_player/flutter_ringtone_player.dart';
-```
+Flutter ListView Tutorial | Clock App (Episode-4)
+https://youtu.be/tKtYfuuVHlA
 
-Then simply call this to play system default notification sound:
+Flutter Local Notification Tutorial | Clock App (Episode-5)
+https://youtu.be/iKxrt4ASR5Y
 
-```dart
-FlutterRingtonePlayer.playNotification();
-```
+SQLite Database in Flutter | Tutorial || Clock App (Episode-6)
+https://youtu.be/WqQhJmwp5L4
 
-There's also this generic method allowing you to specify in detail what kind of ringtone should be played:
+Flutter Clock App | Live Coding
+https://youtu.be/AqDxcfhgvwE
 
-```dart
-FlutterRingtonePlayer.play(
-  android: AndroidSounds.notification,
-  ios: IosSounds.glass,
-  looping: true, // Android only - API >= 28
-  volume: 0.1, // Android only - API >= 28
-  asAlarm: false, // Android only - all APIs
-);
+If you like my work, support me to create more!<br>
+<a href="https://www.buymeacoffee.com/afzalali15" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="CodeX Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" ></a>
 
-```
+## Getting Started
 
-### .play*() optional attributes
+This project is a starting point for a Flutter application.
 
-| Attribute       |  Description |
-| --------------  | ------------ |
-| `bool` looping  | Enables looping of ringtone. Requires `FlutterRingtonePlayer.stop();` to stop ringing. |
-| `double` volume | Sets ringtone volume in range 0 to 1.0. |
-| `bool` asAlarm  | Allows to ignore device's silent/vibration mode and play given sound anyway. |
+A few resources to get you started if this is your first Flutter project:
 
+- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-To stop looped ringtone please use:
-
-```dart
-FlutterRingtonePlayer.stop();
-```
-
-Above works only on Android, and please note that by default Alarm & Ringtone sounds are looped.
-
-## Default sounds
-
-| Method           | Android | iOS |
-| ---------------- | ------- | --- |
-| playAlarm        | [RingtoneManager.TYPE_ALARM](https://developer.android.com/reference/android/media/RingtoneManager#TYPE_ALARM) | IosSounds.alarm |
-| playNotification | [RingtoneManager.TYPE_NOTIFICATION](https://developer.android.com/reference/android/media/RingtoneManager#TYPE_NOTIFICATION) | IosSounds.triTone |
-| playRingtone     | [RingtoneManager.TYPE_RINGTONE](https://developer.android.com/reference/android/media/RingtoneManager#TYPE_RINGTONE) | IosSounds.electronic |
-
-### Note on iOS sounds
-
-If you want to use any other sound on iOS you can always specify a valid Sound ID and manually construct [IosSound]:
-
-```dart
-FlutterRingtonePlayer.play(
-  android: AndroidSounds.notification,
-  ios: const IosSound(1023),
-  looping: true,
-  volume: 0.1,
-);
-```
+For help getting started with Flutter, view our
+[online documentation](https://flutter.dev/docs), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
